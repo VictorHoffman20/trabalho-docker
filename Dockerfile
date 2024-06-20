@@ -1,7 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.8-slim
 
 WORKDIR /app
 
-COPY app.py .
+COPY . /app
 
-CMD ["python", "app.py"]
+EXPOSE 80
+
+ENV NAME World
+
+CMD ["python", "aplicacao.py"]
