@@ -1,23 +1,15 @@
-import sys
+import random
 
 def main():
-    nome = "Seu Nome"  
-    matricula = "Sua Matricula" 
+    nome = "Victor Augusto Malaquias Hoffman"  
+    matricula = "198462"  
 
-    if len(sys.argv) != 2:
-        print("Por favor, forneça um único número como argumento.")
-        return
+    numero = random.randint(1, 20)
 
-    try:
-        numero = int(sys.argv[1])
-        
-        for i in range(1, numero + 1):
-            print(i)
+    for i in range(1, numero + 1):
+        print(i)
 
-        print(f"\nNome: {nome}, Matrícula: {matricula}")
-
-    except ValueError:
-        print("Por favor, insira um número inteiro válido como argumento.")
+    print(f"\nNome: {nome}, Matrícula: {matricula}")
 
 if __name__ == "__main__":
     main()
